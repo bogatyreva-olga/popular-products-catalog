@@ -1,0 +1,58 @@
+.card {
+  width: 334px;
+  height: 496px;
+  border: 2px solid black;
+  padding: 25px;
+  position: relative;
+}
+
+.card__quantity-buttons {
+  width: 100px;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 30px 40px 30px;
+  justify-content: center;
+}
+
+.card__minus-btn {
+  background: url("../img/icons/minus.png") no-repeat center;
+  cursor: pointer;
+}
+
+.card__plus-btn {
+  background: url("../img/icons/plus.png") no-repeat center;
+  cursor: pointer;
+}
+
+.card__quantity {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card__quantity-buttons input {
+  font-family: "Rubik Regular";
+  font-size: 18px;
+  color: #4C4E50;
+  text-align: center;
+}
+
+.card__basket {
+  width: 174px;
+  height: 50px;
+  background-color: #F1D264;
+  border-radius: 5px;
+}
+
+.card__basket a {
+  text-align: center;
+}
+
+.card__is-hit, .card__is-new {
+  display: none;
+}
+
+.old-price {
+  display: none;
+}
