@@ -24,12 +24,17 @@ export const styles = () => {
         .pipe(browser.stream());
 }
 
+export const fonts = () => {
+    return gulp.src('source/fonts/**')
+        .pipe(gulp.dest('build/fonts'))
+}
+
 export const js = () => {
     return gulp.src('source/js/**')
         .pipe(gulp.dest('build/js'))
 }
 
- // Server
+// Server
 
 export const server = (done) => {
     browser.init({
@@ -72,5 +77,5 @@ const watcher = () => {
 }
 
 export default gulp.series(
-    styles, server, html, sprite, images, watcher
+    styles, server, fonts, html, sprite, images, watcher
 );

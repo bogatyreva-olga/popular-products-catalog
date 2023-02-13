@@ -1,80 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Catalog</title>
+    <link rel="preload" href="fonts/rubik-bold.ttf" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/rubik-regular.ttf" as="font" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../node_modules/glider-js/glider.css">
+    <script src="../node_modules/glider-js/glider.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body class="page">
 <section class="catalog">
-    <div class="catalog__wrapper">
-        <div>
-            <ul class="catalog__links site-list">
-                <li class="site-list__item site-list--active-page"><a class="menu-nav__link" href="#">Популярные товары</a></li>
-                <li class="site-list__item"><a class="menu-nav__link" href="#">Недавно купили</a></li>
-                <li class="site-list__item"><a class="menu-nav__link" href="#">Вас может заинтересовать</a></li>
-            </ul>
-        </div>
-        <div class="catalog__slider">
-            <div class="slider">
-                <div class="slider__arrow-prev">
-                    <svg width="12" height="21">
-                        <use href=""></use>
-                    </svg>
+    <div class="catalog__wrapper-links">
+        <ul class="catalog__links site-list">
+            <li class="site-list__item site-list--active-page"><a class="menu-nav__link" href="#">Популярные товары</a></li>
+            <li class="site-list__item site-list--passive-page"><a class="menu-nav__link" href="#">Недавно купили</a></li>
+            <li class="site-list__item site-list--passive-page"><a class="menu-nav__link" href="#">Вас может заинтересовать</a></li>
+        </ul>
+    </div>
+    <div class="slider-contain">
+        <div class="slider">
+            <div class="slider__card">
+                <div class="slider-card__image">
+                    <img src="img/catalog-img/clock.png">
                 </div>
-                <div class="slider__arrow-next">
-                    <svg width="12" height="21">
-                        <use href=""></use>
-                    </svg>
+                <div class="slider-card__title">
+                    <span class="slider-card__text">Умные часы SMARTWATCH XM 109 черный 0</span>
                 </div>
             </div>
-            <div class="catalog__cards">
-                <div class="catalog__card product-card">
-                    <div class="product-card__image">
-                    </div>
-                    <div class="product-card__title">
-                        <span class="product-card__text">Умные часы SMARTWATCH XM 109 черный 0</span>
-                    </div>
+            <div class="slider__card">
+                <div class="slider-card__image">
+                    <img src="img/catalog-img/clock.png">
                 </div>
-                <div class="catalog__card product-card">
-                    <div class="product-card__image">
-                    </div>
-                    <div class="product-card__title">
-                        <span class="product-card__text">Умные часы SMARTWATCH XM 109 черный 1</span>
-                    </div>
+                <div class="slider-card__title">
+                    <span class="slider-card__text">Умные часы SMARTWATCH XM 109 черный 1</span>
                 </div>
-                <div class="catalog__card product-card">
-                    <div class="product-card__image">
-                    </div>
-                    <div class="product-card__title">
-                        <span class="product-card__text">Умные часы SMARTWATCH XM 109 черный 2</span>
-                    </div>
+            </div>
+            <div class="slider__card">
+                <div class="slider-card__image">
+                    <img src="img/catalog-img/clock.png">
                 </div>
-                <div class="catalog__card product-card">
-                    <div class="product-card__image">
-                    </div>
-                    <div class="product-card__title">
-                        <span class="product-card__text">Умные часы SMARTWATCH XM 109 черный 3</span>
-                    </div>
+                <div class="slider-card__title">
+                    <span class="slider-card__text">Умные часы SMARTWATCH XM 109 черный 2</span>
                 </div>
-                <div class="catalog__card product-card">
-                    <div class="product-card__image">
-                    </div>
-                    <div class="product-card__title">
-                        <span class="product-card__text">Умные часы SMARTWATCH XM 109 черный 4</span>
-                    </div>
+            </div>
+            <div class="slider__card">
+                <div class="slider-card__image">
+                    <img src="img/catalog-img/clock.png">
                 </div>
-                <div class="catalog__card product-card">
-                    <div class="product-card__image">
-                    </div>
-                    <div class="product-card__title">
-                        <span class="product-card__text">Умные часы SMARTWATCH XM 109 черный</span>
-                    </div>
+                <div class="slider-card__title">
+                    <span class="slider-card__text">Умные часы SMARTWATCH XM 109 черный 3</span>
                 </div>
+            </div>
+            <div class="slider__card">
+                <div class="slider-card__image">
+                    <img src="img/catalog-img/clock.png">
+                </div>
+                <div class="slider-card__title">
+                    <span class="slider-card__text">Умные часы SMARTWATCH XM 109 черный 40</span>
+                </div>
+            </div>
+            <div class="slider__card">
+                <div class="slider-card__image">
+                    <img src="img/catalog-img/clock.png">
+                </div>
+                <div class="slider-card__title">
+                    <span class="slider-card__text">Умные часы SMARTWATCH XM 109 черный 50</span>
+                </div>
+            </div>
+            <div class="slider__card">
+                <div class="slider-card__image">
+                    <img src="img/catalog-img/clock.png">
+                </div>
+                <div class="slider-card__title">
+                    <span class="slider-card__text">Умные часы SMARTWATCH XM 109 черный 60</span>
+                </div>
+            </div>
+            <div class="slider__card">
+                <div class="slider-card__image">
+                    <img src="img/catalog-img/clock.png">
+                </div>
+                <div class="slider-card__title">
+                    <span class="slider-card__text">Умные часы SMARTWATCH XM 109 черный 70</span>
+                </div>
+            </div>
+        </div>
+        <div class="slider__btns">
+            <div class="slider__arrow-prev">
+                <button class="slider__btn-prev">
+                    <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 1L2 10.5L11 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="slider__arrow-next">
+                <button class="slider__btn-next">
+                    <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10 10.5L1 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
-
 </section>
 </body>
 </html>
