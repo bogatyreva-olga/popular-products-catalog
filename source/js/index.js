@@ -1,3 +1,5 @@
+import catalog from "./data.js";
+
 window.addEventListener('load', function () {
     new Glider(document.querySelector('.slider'), {
         slidesToScroll: 1,
