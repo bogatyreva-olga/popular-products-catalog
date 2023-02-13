@@ -44,9 +44,9 @@ const catalog = [
         title: "Лейзерсон Ч.И. и др. \"Алгоритмы: построение и анализ. 3-е изд.\"",
         images: [
             "img/catalog-img/alg1.webp",
-            // "img/catalog-img/alg2.webp",
-            // "img/catalog-img/alg3.webp",
-            // "img/catalog-img/alg4.webp",
+            "img/catalog-img/alg2.webp",
+            "img/catalog-img/alg3.webp",
+            "img/catalog-img/alg4.webp",
         ],
         price: 7553,
         oldPrice: null,

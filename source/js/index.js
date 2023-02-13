@@ -14,13 +14,27 @@ function createCardElement(item) {
         cardElement.querySelector(".card__is-favorite img").style.backgroundColor = "#000";
     }
     if (item.images.length > 0) {
-        cardElement.querySelector(".card__images").innerHTML = "";
+        cardElement.querySelector(".card__images div").innerHTML = "";
         item.images.forEach((src) => {
+            let div = document.createElement("div");
             let img = document.createElement("img");
             img.src = src;
-            cardElement.querySelector(".card__images").appendChild(img)
+            div.appendChild(img);
+            cardElement.querySelector(".card__images div").appendChild(div)
         })
     }
+    const sliderClassName = "slider-" + item.id
+    cardElement.querySelector(".card__images div").classList.add(sliderClassName);
+    cardElement.querySelector(".card__images .dots").classList.add(sliderClassName + "-dots");
+
+    document.addEventListener("initCatalogComplete", () => {
+        new Glider(document.querySelector('.' + sliderClassName), {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            draggable: false,
+            dots: "." + sliderClassName + "-dots"
+        })
+    })
 
     cardElement.querySelector(".price span").innerText = item.price;
 
@@ -39,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
     catalog.forEach((item) => {
         slider.appendChild(createCardElement(item));
     })
+
+    document.dispatchEvent(new Event("initCatalogComplete"))
 
     new Glider(document.querySelector('.slider'), {
         slidesToScroll: 1,
