@@ -15,14 +15,20 @@ function createCardElement(item) {
     }
     if (item.images.length > 0) {
         cardElement.querySelector(".card__images div").innerHTML = "";
+        let dots = cardElement.querySelector(".card__images .dots");
         item.images.forEach((src) => {
             let div = document.createElement("div");
             let img = document.createElement("img");
             img.src = src;
+            img.alt = item.title;
             div.appendChild(img);
             cardElement.querySelector(".card__images div").appendChild(div)
+
+            let dotButtonElement = document.createElement('button')
+            dots.appendChild(dotButtonElement)
         })
     }
+
     const sliderClassName = "slider-" + item.id
     cardElement.querySelector(".card__images div").classList.add(sliderClassName);
     cardElement.querySelector(".card__images .dots").classList.add(sliderClassName + "-dots");
@@ -33,7 +39,6 @@ function createCardElement(item) {
             items: 1,
             prevButton: false,
             nextButton: false,
-            // rewind: true,
             loop: true,
             nav: true,
             mouseDrag: true,
