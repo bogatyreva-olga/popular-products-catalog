@@ -1,8 +1,7 @@
 .card {
   width: 334px;
   height: 496px;
-  border: 2px solid black;
-  padding: 25px;
+  border: 2px solid #ECF0F4;
   position: relative;
 }
 
@@ -32,27 +31,92 @@
 }
 
 .card__quantity-buttons input {
-  font-family: "Rubik Regular";
+  font-family: "Rubik Regular", sans-serif;
   font-size: 18px;
   color: #4C4E50;
   text-align: center;
-}
-
-.card__basket {
-  width: 174px;
-  height: 50px;
-  background-color: #F1D264;
   border-radius: 5px;
 }
 
-.card__basket a {
-  text-align: center;
+.card__basket {
+  border: none;
+  width: 174px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: url("../img/icons/basket.svg") no-repeat #F1D264;
+  background-position-x: 36px;
+  background-position-y: center;
+  padding: 0;
+}
+
+.card__basket span {
+  margin-left: 13px;
 }
 
 .card__is-hit, .card__is-new {
   display: none;
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  top: 20px;
+}
+
+.card__images img {
+ height: 334px;
+}
+
+.card__wrapper-aside-icons {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    right: 20px;
+    top: 20px;
+}
+
+.card__title {
+  padding: 0 25px;
+  margin-bottom: 5px;
+}
+
+.card__text {
+  font-family: "Rubik Regular", sans-serif;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .old-price {
   display: none;
+  text-decoration: line-through;
+  color: #8D9295;
+}
+
+.card__price {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-family: "Rubik Bold", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.card__quantity-buttons {
+  border: 1px solid #ECF0F4;
+}
+
+.card__info-product {
+  display: grid;
+  margin-bottom: 25px;
+  grid-template-rows: 40px auto auto;
 }

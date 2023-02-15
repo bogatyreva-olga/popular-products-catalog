@@ -11,7 +11,7 @@ function createCardElement(item) {
         cardElement.querySelector(".card__is-new").style.display = "block";
     }
     if (item.isFavorite) {
-        cardElement.querySelector(".card__is-favorite img").style.backgroundColor = "#000";
+        cardElement.querySelector(".card__is-favorite svg").style.fill = "#f60606";
     }
     if (item.images.length > 0) {
         cardElement.querySelector(".card__images div").innerHTML = "";
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
             next: '.slider__btn-next'
         },
         exactWidth: true,
-        itemWidth: 334,
+        itemWidth: 350,
     })
 })
 
