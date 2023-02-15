@@ -80,7 +80,7 @@
 
 .card__title {
   padding: 0 25px;
-  margin-bottom: 5px;
+  margin: 0 auto 5px;
 }
 
 .card__text {
@@ -122,4 +122,29 @@
   margin-bottom: 25px;
   grid-template-rows: 40px auto auto;
   margin-top: 25px;
+}
+
+@media (max-width: 320px) {
+  .card {
+    width: 260px;
+    height: 441px;
+  }
+
+  .card__text {
+    font-size: 16px;
+  }
+
+  .card__quantity-buttons {
+    display: none;
+  }
+
+  .card__images, .card__images img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .card__title {
+    display: block;
+    margin: auto;
+  }
 }

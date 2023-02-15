@@ -1,6 +1,23 @@
 import catalog from "./data.js";
 
-function createCardElement(item) {
+const createQuantityCountListeners = (itemId) => {
+    document.querySelector('.minus-btn-' + itemId).addEventListener('click', () => {
+        let inputElement = document.querySelector('.quantity-input-' + itemId);
+        let value = parseInt(inputElement.value);
+        if (value > 1) {
+            inputElement.value = --value;
+        }
+    });
+    document.querySelector('.plus-btn-' + itemId).addEventListener('click', () => {
+        let inputElement = document.querySelector('.quantity-input-' + itemId);
+        let value = parseInt(inputElement.value);
+        if (value >= 1 && value < 10) {
+            inputElement.value = ++value;
+        }
+    });
+}
+
+const createCardElement = (item) => {
     const cardTemplateElement = document.querySelector("#card").content;
     const cardElement = cardTemplateElement.cloneNode(true);
 
@@ -30,6 +47,10 @@ function createCardElement(item) {
         })
     }
 
+    cardElement.querySelector('.card__minus-btn').classList.add('minus-btn-' + item.id)
+    cardElement.querySelector('.card__quantity-input').classList.add('quantity-input-' + item.id)
+    cardElement.querySelector('.card__plus-btn').classList.add('plus-btn-' + item.id)
+
     const sliderClassName = "slider-" + item.id
     cardElement.querySelector(".card__images div").classList.add(sliderClassName);
     cardElement.querySelector(".card__images .dots").classList.add(sliderClassName + "-dots");
@@ -45,6 +66,7 @@ function createCardElement(item) {
             mouseDrag: true,
             navContainer: "." + sliderClassName + "-dots",
         });
+        createQuantityCountListeners(item.id)
     })
 
     cardElement.querySelector(".price span").innerText = item.price;
@@ -67,11 +89,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.dispatchEvent(new Event("initCatalogComplete"))
     tns({
+        startIndex: 1,
         container: '.slider',
-        items: 4,
         prevButton: '.slider__btn-prev',
         nextButton: '.slider__btn-next',
         rewind: true,
+        items: 1,
+        mouseDrag: true,
+        responsive: {
+            300: {
+                items: 1,
+                // gutter: 50,
+                // edgePadding: 30,
+            },
+            340: {
+                items: 2,
+            },
+            768: {
+                items: 3,
+            },
+            1024: {
+                items: 4,
+            }
+        }
     });
 })
 
