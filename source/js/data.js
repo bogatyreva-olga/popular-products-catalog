@@ -22,7 +22,11 @@ const catalog = [
     {
         id: "3",
         title: "Умные часы SMARTWATCH XM 109 черный",
-        images: ["img/catalog-img/clock.png"],
+        images: [
+            "img/catalog-img/clock.png",
+            "img/catalog-img/clock2.png",
+            "img/catalog-img/clock3.png",
+        ],
         price: 12999,
         oldPrice: null,
         isHit: true,
@@ -42,12 +46,7 @@ const catalog = [
     {
         id: "5",
         title: "Лейзерсон Ч.И. и др. \"Алгоритмы: построение и анализ. 3-е изд.\"",
-        images: [
-            "img/catalog-img/alg1.webp",
-            "img/catalog-img/alg2.webp",
-            "img/catalog-img/alg3.webp",
-            "img/catalog-img/alg4.webp",
-        ],
+        images: ["img/catalog-img/alg.png"],
         price: 7553,
         oldPrice: null,
         isHit: false,

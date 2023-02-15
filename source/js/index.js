@@ -28,12 +28,17 @@ function createCardElement(item) {
     cardElement.querySelector(".card__images .dots").classList.add(sliderClassName + "-dots");
 
     document.addEventListener("initCatalogComplete", () => {
-        new Glider(document.querySelector('.' + sliderClassName), {
-            slidesToScroll: 1,
-            slidesToShow: 1,
-            draggable: false,
-            dots: "." + sliderClassName + "-dots"
-        })
+        tns({
+            container: '.' + sliderClassName,
+            items: 1,
+            prevButton: false,
+            nextButton: false,
+            // rewind: true,
+            loop: true,
+            nav: true,
+            mouseDrag: true,
+            navContainer: "." + sliderClassName + "-dots",
+        });
     })
 
     cardElement.querySelector(".price span").innerText = item.price;
@@ -55,17 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     document.dispatchEvent(new Event("initCatalogComplete"))
-
-    new Glider(document.querySelector('.slider'), {
-        slidesToScroll: 1,
-        slidesToShow: "auto",
-        draggable: false,
-        arrows: {
-            prev: '.slider__btn-prev',
-            next: '.slider__btn-next'
-        },
-        exactWidth: true,
-        itemWidth: 350,
-    })
+    tns({
+        container: '.slider',
+        items: 4,
+        prevButton: '.slider__btn-prev',
+        nextButton: '.slider__btn-next',
+        rewind: true,
+    });
 })
 

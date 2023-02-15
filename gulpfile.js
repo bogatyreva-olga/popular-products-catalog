@@ -7,7 +7,6 @@ import browser from 'browser-sync';
 import svgstore from 'gulp-svgstore';
 import rename from 'gulp-rename';
 import svgo from 'gulp-svgmin';
-import squoosh from 'gulp-libsquoosh';
 import csso from 'gulp-csso';
 
 // Styles
@@ -65,17 +64,5 @@ export const sprite = () => {
 
 export const images = () => {
     return gulp.src('source/img/**')
-        .pipe(squoosh())
         .pipe(gulp.dest('build/img'))
 }
-
-// Watcher
-
-const watcher = () => {
-    gulp.watch('source/less/**/*.less', gulp.series(styles));
-    gulp.watch('source/*.html').on('change', browser.reload);
-}
-
-export default gulp.series(
-    styles, server, fonts, html, sprite, images, watcher
-);
