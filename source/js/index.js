@@ -16,6 +16,7 @@ function createCardElement(item) {
     if (item.images.length > 0) {
         cardElement.querySelector(".card__images div").innerHTML = "";
         let dots = cardElement.querySelector(".card__images .dots");
+        dots.innerHTML = "";
         item.images.forEach((src) => {
             let div = document.createElement("div");
             let img = document.createElement("img");

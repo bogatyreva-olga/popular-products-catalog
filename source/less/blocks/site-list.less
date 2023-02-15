@@ -23,3 +23,18 @@
   border-bottom: 2px dotted #535658;
   padding-bottom: 3px;
 }
+
+@media (max-width: 320px) {
+  .site-list {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .site-list--active-page a {
+    font-size: 18px;
+  }
+
+  .site-list--passive-page a {
+    font-size: 14px;
+  }
+}
