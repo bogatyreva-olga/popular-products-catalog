@@ -3,6 +3,11 @@
   height: 496px;
   border: 2px solid #ECF0F4;
   position: relative;
+  border-radius: 5px;
+}
+
+.card__quantity {
+  margin-bottom: 25px;
 }
 
 .card__quantity-buttons {
@@ -65,7 +70,8 @@
 .card__images {
   height: 334px;
   width: 334px;
-  margin: auto;
+  margin: 0 auto 10px;
+  position: relative;
 }
 
 .card__wrapper-aside-icons {
@@ -92,36 +98,47 @@
   font-weight: 400;
 }
 
-.old-price {
+.card__old-price {
+  font-family: "Rubik Bold", sans-serif;
+  font-size: 14px;
   display: none;
   text-decoration: line-through;
   color: #8D9295;
+  gap: 5px;
 }
 
 .card__price {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.price {
   font-family: "Rubik Bold", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 22px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.price {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .card__quantity-buttons {
   border: 1px solid #ECF0F4;
 }
 
+.card__price-symbol {
+  font-size: 17px;
+  line-height: 22px;
+}
+
 .card__info-product {
   display: grid;
   margin-bottom: 25px;
   grid-template-rows: 40px auto auto;
-  margin-top: 25px;
 }
 
 @media (max-width: 320px) {
